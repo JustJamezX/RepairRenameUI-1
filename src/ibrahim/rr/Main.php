@@ -54,11 +54,11 @@ public function rruiform(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "•RRUI•");
-    $form->addButton(T::YELLOW . "•REPAIR•");
-    $form->addButton(T::AQUA . "•RENAME•");
-    $form->addButton(T::GOLD . "•Custom Lore•");
-    $form->addButton(T::RED . "•EXIT•");
+    $form->setTitle(T::BOLD . T::GREEN . "RRUI");
+    $form->addButton(T::YELLOW . "REPAIR");
+    $form->addButton(T::AQUA . "RENAME");
+    $form->addButton(T::GOLD . "Custom Lore");
+    $form->addButton(T::RED . "EXIT");
     $form->sendToPlayer($sender);
  }
 public function menu(Player $sender){
@@ -77,10 +77,10 @@ public function menu(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "•RRUI•");
-    $form->addButton(T::YELLOW . "•USE EXP•");
-    $form->addButton(T::AQUA . "•USE MONEY•");
-    $form->addButton(T::RED . "•EXIT•");
+    $form->setTitle(T::BOLD . T::GREEN . "RRUI");
+    $form->addButton(T::YELLOW . "USE EXP");
+    $form->addButton(T::AQUA . "USE MONEY");
+    $form->addButton(T::RED . "EXIT");
     $form->sendToPlayer($sender);
  }
 public function xp(Player $sender){
@@ -191,7 +191,7 @@ public function rename(Player $sender){
           $economy = EconomyAPI::getInstance();
           $mymoney = $economy->myMoney($sender);
           $rename = $this->getConfig()->get("price-rename");
-	  $f->setTitle(T::BOLD . T::YELLOW . "•RenameUI•");
+	  $f->setTitle(T::BOLD . T::YELLOW . "RenameUI");
 	  $f->addLabel("§aRename cost: §e$rename\n§bYour money: $mymoney");
           $f->addInput(T::RED . "Rename Item:", "HardCore");
 	  $f->sendToPlayer($sender);
@@ -221,7 +221,7 @@ public function setLore(Player $sender){
           $economy = EconomyAPI::getInstance();
           $mymoney = $economy->myMoney($sender);
           $lore = $this->getConfig()->get("price-lore");
-	  $f->setTitle(T::BOLD . T::YELLOW . "•Custom Lore•");
+	  $f->setTitle(T::BOLD . T::YELLOW . "Custom Lore");
 	  $f->addLabel("§aSet lore cost: §e$lore\n§bYour money: $mymoney");
           $f->addInput(T::RED . "SetLore:", "HardCore");
 	  $f->sendToPlayer($sender);
